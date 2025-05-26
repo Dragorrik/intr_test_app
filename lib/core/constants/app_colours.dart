@@ -4,6 +4,8 @@ class AppColours {
   // Widget colors
   static const Color white = Colors.white;
   static const Color scaffoldBackgroundColor = Color(0XFF10100E);
+  static const Color bottomNavigationBarColor = Color(0XFF1D1D1D);
+  static const Color accountDataContainerColor = Color(0XFF1E1E1E);
   static const Color appWidgetColor = Color(0XFFE1FF41);
 
   // Navigation colors
