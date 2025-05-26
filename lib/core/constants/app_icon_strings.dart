@@ -18,4 +18,5 @@ class AppIconStrings {
   static const String scanIcon = 'assets/icons/scan.png';
   static const String settingBottomIcon = 'assets/icons/setting_bottom.png';
   static const String settingIcon = 'assets/icons/setting.png';
+  static const String goIcon = 'assets/icons/go_icon.png';
 }

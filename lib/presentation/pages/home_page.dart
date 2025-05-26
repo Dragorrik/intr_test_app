@@ -4,7 +4,7 @@ import 'package:intr_test_app/core/constants/app_colours.dart';
 import 'package:intr_test_app/core/constants/app_icon_strings.dart';
 import 'package:intr_test_app/core/constants/app_strings.dart';
 import 'package:intr_test_app/core/constants/app_style.dart';
-import 'package:intr_test_app/presentation/widgets/home_bottom_panel.dart';
+import 'package:intr_test_app/presentation/widgets/home_bottom_action_panel.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
