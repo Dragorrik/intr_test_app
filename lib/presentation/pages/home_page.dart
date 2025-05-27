@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intr_test_app/core/constants/app_colours.dart';
 import 'package:intr_test_app/core/constants/app_icon_strings.dart';
+import 'package:intr_test_app/core/constants/app_image_strings.dart';
 import 'package:intr_test_app/core/constants/app_strings.dart';
 import 'package:intr_test_app/core/constants/app_style.dart';
 import 'package:intr_test_app/presentation/widgets/home_bottom_action_panel.dart';
@@ -26,7 +27,7 @@ class HomePage extends StatelessWidget {
                     children: [
                       CircleAvatar(
                         radius: 25.r,
-                        backgroundImage: AssetImage(AppIconStrings.personIcon),
+                        backgroundImage: AssetImage(AppImageStrings.personOne),
                       ),
 
                       SizedBox(width: 10.w),

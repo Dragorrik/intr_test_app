@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intr_test_app/core/constants/app_colours.dart';
 import 'package:intr_test_app/core/constants/app_icon_strings.dart';
+import 'package:intr_test_app/core/constants/app_image_strings.dart';
 import 'package:intr_test_app/core/constants/app_strings.dart';
 import 'package:intr_test_app/core/constants/app_style.dart';
 import 'package:intr_test_app/presentation/widgets/profile_bottom_action_panel.dart';
@@ -18,7 +19,7 @@ class ProfilePage extends StatelessWidget {
             padding: EdgeInsets.all(18.0).r,
             child: Column(
               children: [
-                SizedBox(height: 10.h),
+                SizedBox(height: 20.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -43,7 +44,7 @@ class ProfilePage extends StatelessWidget {
                   children: [
                     CircleAvatar(
                       radius: 60.r,
-                      backgroundImage: AssetImage(AppIconStrings.personIcon),
+                      backgroundImage: AssetImage(AppImageStrings.personTwo),
                     ),
                     SizedBox(width: 20.w),
                     Expanded(

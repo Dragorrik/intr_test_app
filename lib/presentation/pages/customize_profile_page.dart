@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intr_test_app/core/constants/app_colours.dart';
 import 'package:intr_test_app/core/constants/app_icon_strings.dart';
+import 'package:intr_test_app/core/constants/app_image_strings.dart';
 import 'package:intr_test_app/core/constants/app_strings.dart';
 import 'package:intr_test_app/core/constants/app_style.dart';
+import 'package:intr_test_app/presentation/widgets/custom_data_container.dart';
+import 'package:intr_test_app/presentation/widgets/profile_bottom_action_panel.dart';
 
 class CustomizeProfilePage extends StatelessWidget {
   const CustomizeProfilePage({super.key});
@@ -20,7 +23,7 @@ class CustomizeProfilePage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 10.h),
+                  SizedBox(height: 20.h),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -70,7 +73,7 @@ class CustomizeProfilePage extends StatelessWidget {
 
                   SizedBox(
                     width: double.infinity,
-                    height: 0.4.sh,
+                    height: 0.7.sh,
                     child: TabBarView(
                       children: [
                         Center(
@@ -80,9 +83,52 @@ class CustomizeProfilePage extends StatelessWidget {
                           ),
                         ),
                         Center(
-                          child: Text(
-                            "Account Settings",
-                            style: AppStyle.textTheme.bodyLarge,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              SizedBox(height: 25.h),
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(20.r),
+                                child: Image.asset(
+                                  AppImageStrings.personThree,
+                                  width: 106.w,
+                                  height: 106.h,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              SizedBox(height: 15.h),
+                              Text(
+                                AppStrings.personFour,
+                                style: AppStyle.textTheme.titleMedium,
+                              ),
+                              //SizedBox(height: 5.h),
+                              Text(
+                                AppStrings.appDeveloperText,
+                                style: AppStyle.textTheme.titleSmall!.copyWith(
+                                  color: AppColours.appWidgetColor,
+                                ),
+                              ),
+                              SizedBox(height: 15.h),
+                              CustomDataContainer(
+                                title: AppStrings.personalDataText,
+                                iconPath: AppIconStrings.profileIcon,
+                              ),
+                              SizedBox(height: 10.h),
+                              CustomDataContainer(
+                                title: AppStrings.settingText,
+                                iconPath: AppIconStrings.settingIcon,
+                              ),
+                              SizedBox(height: 10.h),
+                              CustomDataContainer(
+                                title: AppStrings.dashboardText,
+                                iconPath: AppIconStrings.dashboardIcon,
+                              ),
+                              SizedBox(height: 10.h),
+                              CustomDataContainer(
+                                title: AppStrings.billingDetailsText,
+                                iconPath: AppIconStrings.billingIcon,
+                              ),
+                            ],
                           ),
                         ),
                         Center(
@@ -96,6 +142,13 @@ class CustomizeProfilePage extends StatelessWidget {
                   ),
                 ],
               ),
+            ),
+
+            /// Bottom Action Panel
+            ProfileBottomActionPanel(
+              title: "Whatchamacallit",
+              topPosition: 0.83,
+              bgColor: AppColours.navigationSixColor,
             ),
           ],
         ),
