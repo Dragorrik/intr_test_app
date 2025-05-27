@@ -5,6 +5,7 @@ import 'package:intr_test_app/core/constants/app_icon_strings.dart';
 import 'package:intr_test_app/core/constants/app_image_strings.dart';
 import 'package:intr_test_app/core/constants/app_strings.dart';
 import 'package:intr_test_app/core/constants/app_style.dart';
+import 'package:intr_test_app/presentation/pages/profile_page.dart';
 import 'package:intr_test_app/presentation/widgets/custom_data_container.dart';
 import 'package:intr_test_app/presentation/widgets/profile_bottom_action_panel.dart';
 
@@ -27,10 +28,20 @@ class CustomizeProfilePage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Image.asset(
-                        AppIconStrings.backIcon,
-                        width: 45.w,
-                        height: 45.h,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pop(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ProfilePage(),
+                            ),
+                          );
+                        },
+                        child: Image.asset(
+                          AppIconStrings.backIcon,
+                          width: 45.w,
+                          height: 45.h,
+                        ),
                       ),
                       Text(
                         AppStrings.profileText,
@@ -63,9 +74,9 @@ class CustomizeProfilePage extends StatelessWidget {
 
                     indicatorSize: TabBarIndicatorSize.tab,
                     tabs: const [
-                      Tab(text: "Personal Information"),
-                      Tab(text: "Account Settings"),
-                      Tab(text: "Activity & History"),
+                      Tab(text: AppStrings.personalInfoText),
+                      Tab(text: AppStrings.accountSettingsText),
+                      Tab(text: AppStrings.activityAndHistoryText),
                     ],
                   ),
 
@@ -78,7 +89,7 @@ class CustomizeProfilePage extends StatelessWidget {
                       children: [
                         Center(
                           child: Text(
-                            "Personal Information",
+                            AppStrings.personalInfoText,
                             style: AppStyle.textTheme.bodyLarge,
                           ),
                         ),
@@ -133,7 +144,7 @@ class CustomizeProfilePage extends StatelessWidget {
                         ),
                         Center(
                           child: Text(
-                            "Activity and History",
+                            AppStrings.activityAndHistoryText,
                             style: AppStyle.textTheme.bodyLarge,
                           ),
                         ),
@@ -145,10 +156,16 @@ class CustomizeProfilePage extends StatelessWidget {
             ),
 
             /// Bottom Action Panel
-            ProfileBottomActionPanel(
-              title: "Whatchamacallit",
-              topPosition: 0.83,
-              bgColor: AppColours.navigationSixColor,
+            Positioned(
+              top: 0.83.sh,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              child: ProfileBottomActionPanel(
+                title: "Whatchamacallit",
+
+                bgColor: AppColours.navigationSixColor,
+              ),
             ),
           ],
         ),

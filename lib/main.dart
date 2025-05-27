@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intr_test_app/core/constants/app_style.dart';
+import 'package:intr_test_app/presentation/pages/customize_profile_page.dart';
+import 'package:intr_test_app/presentation/pages/profile_page.dart';
 import 'package:intr_test_app/presentation/widgets/custom_nav_bar.dart';
 
 void main() {
