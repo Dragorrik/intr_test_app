@@ -58,7 +58,8 @@ class CustomizeProfilePage extends StatelessWidget {
 
                   /// Tab bar
                   TabBar(
-                    //isScrollable: true,
+                    tabAlignment: TabAlignment.start,
+                    isScrollable: true,
                     dividerColor: Colors.transparent,
                     labelColor: Colors.white,
                     unselectedLabelColor: Colors.white,
@@ -82,9 +83,7 @@ class CustomizeProfilePage extends StatelessWidget {
 
                   SizedBox(height: 10.h),
 
-                  SizedBox(
-                    width: double.infinity,
-                    height: 0.7.sh,
+                  Expanded(
                     child: TabBarView(
                       children: [
                         Center(
@@ -97,17 +96,17 @@ class CustomizeProfilePage extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              SizedBox(height: 25.h),
+                              SizedBox(height: 10.h),
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(20.r),
                                 child: Image.asset(
                                   AppImageStrings.personThree,
-                                  width: 106.w,
-                                  height: 106.h,
-                                  fit: BoxFit.cover,
+                                  width: 105.w,
+                                  height: 105.h,
+                                  fit: BoxFit.contain,
                                 ),
                               ),
-                              SizedBox(height: 15.h),
+                              SizedBox(height: 10.h),
                               Text(
                                 AppStrings.personFour,
                                 style: AppStyle.textTheme.titleMedium,
